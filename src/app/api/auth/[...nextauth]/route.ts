@@ -1,6 +1,6 @@
 import { PrismaAdapter } from '@auth/prisma-adapter'
-// import { env } from '@/lib/util-functions/env';
-import prisma from '@lib/db/prisma';
+import { env } from '@/lib/util-functions/env';
+import prisma from '@/lib/db/prisma';
 import { NextAuthOptions } from "next-auth";
 import { Adapter } from 'next-auth/adapters';
 import NextAuth from 'next-auth/next';
