@@ -34,6 +34,7 @@ const addProduct = async (formData: FormData) => {
       price,
     }
   });
+
   redirect('/');
 }
 

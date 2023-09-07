@@ -38,8 +38,8 @@ export default async function ProductPage ({ params: {id} }: ProductPageProps) {
       <Image
         src={product.imageUrl}
         alt={product.name}
-        width={500}
-        height={500}
+        width={400}
+        height={200}
         className='rounded-lg'
         priority
       />

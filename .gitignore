@@ -12,6 +12,7 @@
 /.next/
 /out/
 
+/src/data/
 *.bak
 
 # production
