@@ -5,6 +5,7 @@ import PriceTag from './PriceTag'
 import ShoppingCartButton from './navbar/ShoppingCartButton'
 import Footer from './footer/Footer'
 import CartEntry from './CartEntry'
+import PaginationBar from './PaginationBar'
 
 export {
   FormSubmitButton,
@@ -13,5 +14,6 @@ export {
   Navbar,
   ShoppingCartButton,
   Footer,
-  CartEntry
+  CartEntry,
+  PaginationBar
 }

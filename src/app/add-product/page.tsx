@@ -11,7 +11,7 @@ export const metadata = {
 const addProduct = async (formData: FormData) => {
   'use server';
 
-  const session = await getServerSession();
+  const session = await getServerSession(authOptions);
 
   if (!session) {
     redirect('/api/auth/signin?callbackUrl=/add-product');
@@ -26,7 +26,7 @@ const addProduct = async (formData: FormData) => {
     throw Error("Missing required fields");
   }
 
-  const newProduct = await prisma.product.create({
+  await prisma.product.create({
     data: {
       name,
       description,
@@ -34,9 +34,6 @@ const addProduct = async (formData: FormData) => {
       price,
     }
   });
-
-  console.log('added new product', newProduct.id)
-
   redirect('/');
 }
 
