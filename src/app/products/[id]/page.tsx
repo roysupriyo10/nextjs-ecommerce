@@ -23,7 +23,7 @@ export async function generateMetadata({ params: {id} }: ProductPageProps): Prom
   const product = await getProduct(id);
 
   return {
-    title: product.name + ' - eCommerce Website',
+    title: product.name + ' - Quantum Quarry',
     description: product.description,
     openGraph: {
       images: [{ url: product.imageUrl }],

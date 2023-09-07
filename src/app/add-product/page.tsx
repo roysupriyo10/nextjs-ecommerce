@@ -5,7 +5,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "../api/auth/[...nextauth]/route";
 
 export const metadata = {
-  title: "Add Product - eCommerce Website"
+  title: "Add Product - Quantum Quarry"
 }
 
 const addProduct = async (formData: FormData) => {

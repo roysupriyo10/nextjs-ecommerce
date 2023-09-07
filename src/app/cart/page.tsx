@@ -4,7 +4,7 @@ import { setProductQuantity } from "./actions";
 import { formatPrice } from "@/lib/util-functions";
 
 export const metadata = {
-  title: "Your Cart - eCommerce"
+  title: "Your Cart - Quantum Quarry"
 }
 
 const CartPage = async () => {

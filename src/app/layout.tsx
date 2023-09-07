@@ -7,8 +7,8 @@ import { SessionProvider } from './SessionProvider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'eCommerce Website',
-  description: "We make your wallet cry"
+  title: 'Quantum Quarry',
+  description: "We make your wallet cry. :D"
 }
 
 export default function RootLayout({

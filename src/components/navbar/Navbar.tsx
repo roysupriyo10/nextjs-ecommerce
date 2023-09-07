@@ -34,9 +34,9 @@ const Navbar = async () => {
               src={logo}
               height={40}
               width={40}
-              alt="eCommerce logo"
+              alt="Quantum Quarry logo"
             />
-            eCommerce
+            Quantum Quarry
           </Link>
         </div>
         <div className="flex-none gap-2">

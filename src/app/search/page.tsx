@@ -7,7 +7,7 @@ interface SearchPageProps {
 
 export const generateMetadata = ({ searchParams: { query } }: SearchPageProps) => {
   return {
-    title: `Search: ${query} - eCommerce`
+    title: `Search: ${query} - Quantum Quarry`
   };
 }
 
