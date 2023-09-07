@@ -24,7 +24,7 @@ const Navbar = async () => {
 
   return (
     <nav className="bg-base-100">
-      <div className="navbar max-w-7xl m-auto flex-col sm:flex-row gap-2">
+      <div className="px-4 navbar max-w-7xl m-auto flex-col sm:flex-row gap-2">
         <div className="flex-1">
           <Link
             href="/"
@@ -46,7 +46,7 @@ const Navbar = async () => {
                 type="text"
                 name="search-query"
                 placeholder="Search"
-                className="input input-bordered w-full min-w-[100px]"
+                className="input input-bordered w-full min-w-[80px]"
               />
             </div>
           </form>

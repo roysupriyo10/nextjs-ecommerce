@@ -40,7 +40,7 @@ const PaginationBar = ({ totalPages, currentPage }: PaginationBarProps) => {
         <button className="join-item btn pointer-events-none">
           Page {currentPage}
         </button>
-        {currentPage > 1 && <Link
+        {currentPage < totalPages && <Link
           href={`?page=${currentPage + 1}`}
           className={`join-item btn`}
         >

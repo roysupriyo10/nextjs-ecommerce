@@ -18,15 +18,15 @@ export default async function Home({ searchParams: { page = "1" } }: HomeProps) 
 
   const products = await prisma.product.findMany({
     orderBy: {id: "desc"},
-    skip: (currentPage - 1) * pageSize,
+    skip: (currentPage - 1) * pageSize + (currentPage !== 1 ? 1 : 0),
     take: pageSize + (currentPage === 1 ? heroItemCount : 0)
   })
 
+  console.log(pageSize + (currentPage === 1 ? heroItemCount : 0), 'taking')
+
 
   const randomHeroProduct = Math.ceil(Math.random() * pageSize)
-  if (currentPage === 1) {
-    products.splice(randomHeroProduct, 1);
-  }
+  if (currentPage === 1) console.log(products.length);
   return (
     <div className="flex flex-col items-center">
       {
@@ -61,9 +61,9 @@ export default async function Home({ searchParams: { page = "1" } }: HomeProps) 
       <div
         className="my-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4"
       >
-        { products.map(product => ( 
+        { currentPage === 1 ? products.filter((_, index) => index !== randomHeroProduct).map(product => ( 
           <ProductCard product={product} key={product.id} />
-        )) }
+        )) : products.map(product => <ProductCard product={product} key={product.id} />) }
       </div>
 
       {totalPages > 1 && <PaginationBar
